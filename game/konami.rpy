@@ -27,13 +27,14 @@ init python:
             if ev.type != pygame.KEYDOWN:
                 return
             # If it's not the key we want, go back to the start of the state machine.
-            if ev.key != self.code[self.state]:
+            code = self.code
+            if ev.key != code[self.state]:
                 self.state = 0
                 return
             # Otherwise, go to the next state.
             self.state += 1
             # If we are at the end of the code, then call the target label in the new context. (After we reset the state machine.)
-            if self.state == len(self.code):
+            if self.state == len(code):
                 self.state = 0
                 renpy.call_in_new_context(self.target)
 

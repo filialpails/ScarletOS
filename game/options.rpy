@@ -17,8 +17,8 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1024
+    config.screen_height = 896
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -28,7 +28,7 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "ScarletOS"
-    config.version = "1.0.0"
+    config.version = "2.0.0"
 
     #########################################
     # Themes

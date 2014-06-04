@@ -57,6 +57,12 @@ screen say:
     # Use the quick menu.
     use quick_menu
 
+style window:
+    xfill False
+    xminimum 512
+    yminimum 128
+    xalign 0.2
+    yalign 0.2
 
 ##############################################################################
 # Choice
@@ -68,8 +74,9 @@ screen choice:
 
     window:
         style "menu_window"
-        xalign 0.5
-        yalign 0.5
+        xalign 0.0
+        yanchor 1.0
+        ypos 0.67
 
         vbox:
             style "menu"
@@ -552,9 +559,10 @@ init -2:
 
     style quick_button_text:
         is default
-        size 12
-        idle_color "#8888"
-        hover_color "#ccc"
+        size 14
+        idle_color "#cccc"
+        hover_color "#fff"
         selected_idle_color "#cc08"
         selected_hover_color "#cc0"
         insensitive_color "#4448"
+        outlines [(1, "#444", 0, 0)]
